@@ -1,0 +1,51 @@
+{
+  "name": "@nestjs-dash/support",
+  "version": "0.3.0",
+  "private": false,
+  "description": "Shared utilities and types for Nestjs-Dash packages.",
+  "bugs": {
+    "url": "https://github.com/nestjs-dash/nestjs-dash/issues"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nestjs-dash/support.git",
+    "directory": "nestjs-dash/support"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check-types": "tsc -p tsconfig.json --noEmit",
+    "format": "oxfmt",
+    "lint": "oxlint src",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "release": "release-it",
+    "prepublishOnly": "npm run build",
+    "dev": "tsc -p tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^12.0.0",
+    "@types/node": "^26.5.1",
+    "@vitest/coverage-v8": "5.0.0",
+    "oxfmt": "^0.67.0",
+    "oxlint": "^1.82.0",
+    "release-it": "^21.0.2",
+    "typescript": "7.0.2",
+    "vitest": "^5.0.0"
+  }
+}
