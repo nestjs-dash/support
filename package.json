@@ -1,0 +1,47 @@
+{
+  "name": "@nestjs-dash/support",
+  "version": "0.0.0",
+  "description": "Shared utilities and types for Adminify",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nestjs-dash/support.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nestjs-dash/support/issues"
+  },
+  "homepage": "https://github.com/nestjs-dash/support#readme",
+  "files": [
+    "dist"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "check-types": "tsc -p tsconfig.json --noEmit",
+    "format": "oxfmt",
+    "lint": "oxlint src",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "release": "release-it",
+    "dev": "tsc -p tsconfig.json --watch"
+  },
+  "devDependencies": {
+    "@release-it/conventional-changelog": "^12.0.0",
+    "@types/node": "^22.15.30",
+    "@vitest/coverage-v8": "^5.0.0",
+    "oxfmt": "^0.67.0",
+    "oxlint": "^1.82.0",
+    "release-it": "^21.0.2",
+    "typescript": "6.0.3",
+    "vitest": "^5.0.0"
+  }
+}

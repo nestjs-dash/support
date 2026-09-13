@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/oxc-project/oxc/main/crates/oxc_linter/src/rules.rs",
+  "env": {
+    "node": true
+  },
+  "ignorePatterns": ["dist/**", "node_modules/**"],
+  "plugins": ["typescript", "oxc"],
+  "singleQuote": true,
+  "trailingComma": "all"
+}
